@@ -1,0 +1,20 @@
+---
+title: "Hough Transform"
+date: "2019-11-11"
+output:
+  xaringan::moon_reader:
+    css: ["default"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+# This is how you do a header
+We will put things on the slide here
+
+```{r, fig.cap="This is how we do pictures", out.width="50%", fig.keep="hold", fig.align='center'}
+knitr::include_graphics("images/Charlotte/Picture1.png")
+```
+
+---
