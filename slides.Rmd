@@ -18,3 +18,80 @@ knitr::include_graphics("images/Charlotte/Picture1.png")
 ```
 
 ---
+
+class: inverse, center, middle
+
+# Circular Hough Transform
+
+## Joe Zemmels
+
+---
+
+# Circular Hough Transform
+
+- Detects circles of given radius, $r$, in an image.
+
+```{r, fig.cap="(Left) Image of circle to be detected. (Right) Accumulator array", out.width="80%", fig.keep="hold", fig.align='center',echo=FALSE}
+knitr::include_graphics("images/Joe/houghTransformCircle.jpg")
+```
+
+---
+### Application: Breech Face Impressions
+
+.center[
+<img src="images/Joe/xtai_bfExample.png" width="50%" align="center" />
+]
+
+.pull-left[
+<img src="images/Joe/breechFace.jpg" width="70%" align="center" />
+]
+
+.pull-right[
+<img src="images/Joe/breechFaceImpression.jpg" width="70%" align="center" />
+]
+
+---
+
+### Filtering Firing Pin Impression Circle
+
+- Goal: Remove the firing pin impression "minutiae"
+- Problem: Don't know radius ahead of time
+
+.center[
+<img src="images/Joe/firingPinMinutiae.png" width="100%" align="center" />
+]
+
+---
+### Identifying Firing Pin Impression Radius
+- Idea: Count non-NA pixels in each row of image. 
+  - Determine where this count hits a local maxima.
+
+
+<img src="images/Joe/nonNA_rowSums.png" width="90%" align="center" />
+---
+### Identifying Firing Pin Impression Radius
+
+- Test out a variety of radius values and choose the "best"
+
+.pull-left[
+<img src="images/Joe/accumulator.gif" width="100%" align="center" />
+]
+
+.pull-right[
+<img src="images/Joe/houghTransformFilter.gif" width="100%" align="center" />
+]
+
+---
+### Hough Score Heuristic
+- Identify consecutive radius values where Hough Score reaches consistently high values. 
+ - Take average of those radius values.
+
+<img src="images/Joe/houghScorePlot.png" width="100%" align="center" />
+---
+
+
+### Successes & Failures
+
+.center[<img src="images/Joe/processedBF.png" width="60%" align="center" />
+
+<img src="images/Joe/Fadul8-2_FadulX_beforeRotation.png" width="60%" align="center" />]
