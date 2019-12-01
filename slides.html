@@ -38,20 +38,20 @@ class: inverse, center, middle
 
 ---
 
-# Circular Hough Transform
+## Circular Hough Transform
 
-- Detects circles of given radius, `\(r\)`, in an image.
+- Detects center, `\((x,y)\)`, of circle in an image given radius, `\(r\)`.
+ - (Left) Image of circle to be detected. 
+ - (Right) Accumulator array.
 
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="images/Joe/houghTransformCircle.jpg" alt="(Left) Image of circle to be detected. (Right) Accumulator array" width="80%" /&gt;
-&lt;p class="caption"&gt;(Left) Image of circle to be detected. (Right) Accumulator array&lt;/p&gt;
-&lt;/div&gt;
+&lt;img src="images/Joe/houghTransformCircle.jpg" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 ### Application: Breech Face Impressions
 
 .center[
-&lt;img src="images/Joe/xtai_bfExample.png" width="50%" align="center" /&gt;
+&lt;!-- &lt;img src="images/Joe/xtai_bfExample.png" width="50%" align="center" /&gt; --&gt;
+&lt;img src="images/Joe/breechFaceExample.jpg" width="30%" align="center" /&gt;
 ]
 
 .pull-left[
@@ -64,49 +64,53 @@ class: inverse, center, middle
 
 ---
 
-### Filtering Firing Pin Impression Circle
+### Detecting Firing Pin Impression Circle
 
-- Goal: Remove the firing pin impression "minutiae"
+- Goal: Detect and filter out inner circle in the image
 - Problem: Don't know radius ahead of time
+ - Need to estimate radius before applying Hough Transform
 
 .center[
 &lt;img src="images/Joe/firingPinMinutiae.png" width="100%" align="center" /&gt;
 ]
 
 ---
+&lt;!-- ### Identifying Firing Pin Impression Radius --&gt;
+&lt;!-- - Idea: Count non-NA pixels in each row of image.  --&gt;
+&lt;!--   - Determine where this count hits local maxima. --&gt;
+
+
+&lt;!-- &lt;img src="images/Joe/nonNA_rowSums.png" width="90%" align="center" /&gt; --&gt;
+&lt;!-- --- --&gt;
 ### Identifying Firing Pin Impression Radius
-- Idea: Count non-NA pixels in each row of image. 
-  - Determine where this count hits a local maxima.
 
-
-&lt;img src="images/Joe/nonNA_rowSums.png" width="90%" align="center" /&gt;
----
-### Identifying Firing Pin Impression Radius
-
-- Test out a variety of radius values and choose the "best"
+- Test out a variety of radius values and choose the "best."
+ - (Left) Hough Tranform-selected circles of radius `\(r \in \{191,...,231\}\)`. 
+ - (Right) Accumulator arrays.
 
 .pull-left[
-&lt;img src="images/Joe/accumulator.gif" width="100%" align="center" /&gt;
-]
-
-.pull-right[
 &lt;img src="images/Joe/houghTransformFilter.gif" width="100%" align="center" /&gt;
 ]
 
----
-### Hough Score Heuristic
-- Identify consecutive radius values where Hough Score reaches consistently high values. 
- - Take average of those radius values.
+.pull-right[
+&lt;img src="images/Joe/accumulator.gif" width="100%" align="center" hspace="0"/&gt;
+]
 
-&lt;img src="images/Joe/houghScorePlot.png" width="100%" align="center" /&gt;
 ---
+&lt;!-- ### Hough Score Heuristic --&gt;
+&lt;!-- - Identify consecutive radius values where Hough Score reaches consistently high values.  --&gt;
+&lt;!--  - Take average of those radius values. --&gt;
+
+&lt;!-- &lt;img src="images/Joe/houghScorePlot.png" width="100%" align="center" /&gt; --&gt;
+&lt;!-- --- --&gt;
 
 
 ### Successes &amp; Failures
 
-.center[&lt;img src="images/Joe/processedBF.png" width="60%" align="center" /&gt;
-
-&lt;img src="images/Joe/Fadul8-2_FadulX_beforeRotation.png" width="60%" align="center" /&gt;]
+.center[
+&lt;img src="images/Joe/processedBF.png" width="60%" align="center" vspace="0"/&gt;
+&lt;img src="images/Joe/Fadul8-2_FadulX_beforeRotation.png" width="60%" align="center" vspace="0"/&gt;
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
