@@ -10,14 +10,6 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
-# This is how you do a header
-We will put things on the slide here
-
-```{r, fig.cap="This is how we do pictures", out.width="50%", fig.keep="hold", fig.align='center'}
-knitr::include_graphics("images/Charlotte/Picture1.png")
-```
-
----
 
 # The Hough Transform
 
@@ -74,10 +66,99 @@ $$r = x \cos \theta + y \sin \theta$$
 <img src="images/Caleb/ada_res.png" width="100%" align="center" />
 ]
 
+---
+
+class: inverse, center, middle
+
+# Linear Hough Transform Applied to Bullet Data
+
+## Charlotte Roiger
+
+---
+
+# Motivation
+
+.center[
+<img src="images/Charlotte/csi-orig.jpeg" width="200%" align="center" />
+]
+
+---
+
+# Motivation
+
+.center[
+<img src="images/Charlotte/csi.jpeg" width="200%" align="center" />
+]
+
+---
+
+# Motivation
+
+.pull-left[
+<img src="images/Charlotte/gun-L5-B3-l1.png" width="100%" align="center" />
+]
+
+.pull-right[
+<img src="images/Charlotte/sig.png" width="1000%" align="center" />
+]
+
+
+
+
+
+Signatures curtesy of Heike Hofmann:https://heike.github.io/bulletxtrctr/
+---
+
+# Motivation
+
+.center[
+<img src="images/Charlotte/p7-original.png" width="100%" align="center" />
+]
+
+---
+
+# Reduce to 2D
+
+.center[
+<img src="images/Charlotte/strong-threshold.png" width="100%" align="center" />
+]
+
+---
+
+# Detect Grooves
+
+.center[
+<img src="images/Charlotte/Hamby252_Bullet1_Land1_hough_lines_process_step_one.png" width="100%" align="center" />]
 
 
 ---
 
+# Normalized Scores
+.center[
+<img src="images/Charlotte/calc-xbottom.png" width="100%" align="center" />]
+
+
+---
+
+# Results
+
+.pull-left[
+<img src="images/Charlotte/br411_3d.png" width="200%" align="center" />
+]
+
+.pull-right[
+<img src="images/Charlotte/hough-estimates-problem-boy.png" width="150%" align="center" />
+]
+
+.pull-left[
+<img src="images/Charlotte/mask_phoenix_nice.png" width="100%" align="center" />
+]
+
+.pull-right[
+<img src="images/Charlotte/mask_hamby_demo_lessnice.png" width="100%" align = "center" />
+]
+
+---
 class: inverse, center, middle
 
 # Circular Hough Transform
