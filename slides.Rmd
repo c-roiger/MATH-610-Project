@@ -140,22 +140,29 @@ Signatures curtesy of Heike Hofmann:https://heike.github.io/bulletxtrctr/
 
 ---
 
-# Results
+# Results: Successes
 
-.pull-left[
-<img src="images/Charlotte/br411_3d.png" width="200%" align="center" />
+.center[
+<img src="images/Charlotte/br411_3d.png" width="100%" align="center"  hspace="0" />
 ]
 
-.pull-right[
-<img src="images/Charlotte/hough-estimates-problem-boy.png" width="150%" align="center" />
+
+
+.center[
+<img src="images/Charlotte/mask_phoenix_nice.png" width="80%" align="center"  hspace="0" />
 ]
 
-.pull-left[
-<img src="images/Charlotte/mask_phoenix_nice.png" width="100%" align="center" />
+
+---
+
+# Results: Failures
+
+.center[
+<img src="images/Charlotte/hough-estimates-problem-boy.png" width="80%" align="center"  hspace="0" />
 ]
 
-.pull-right[
-<img src="images/Charlotte/mask_hamby_demo_lessnice.png" width="100%" align = "center" />
+.center[
+<img src="images/Charlotte/mask_hamby_demo_lessnice.png" width="80%" align = "center"  hspace="0"/>
 ]
 
 ---
