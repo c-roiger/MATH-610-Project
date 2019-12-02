@@ -102,3 +102,63 @@ knitr::include_graphics("images/Joe/houghTransformCircle.jpg")
 <img src="images/Joe/processedBF.png" width="60%" align="center" vspace="0"/>
 <img src="images/Joe/Fadul8-2_FadulX_beforeRotation.png" width="60%" align="center" vspace="0"/>
 ]
+
+---
+
+class: inverse, center, middle
+
+# 3D Hough Transform
+
+## Lirong Xiang
+
+---
+
+# 3D line representation
+
+-  Roberts' line representation: a 3D line can be represented by $x'$, $y'$  and vector b. 
+
+```{r, out.width="95%", fig.keep="hold", fig.align='center',echo=FALSE}
+knitr::include_graphics("images/Lirong/3Drepresentation.png")
+```
+---
+
+-  comparison between 2D and 3D Hough Transform
+
+```{r, out.width="100%", fig.keep="hold", fig.align='center',echo=FALSE}
+knitr::include_graphics("images/Lirong/comparison.png")
+```
+---
+
+-  3D Hough line detection
+
+```{r, out.width="100%", fig.keep="hold", fig.align='center',echo=FALSE}
+knitr::include_graphics("images/Lirong/demo.png")
+```
+
+---
+
+### Applications 
+
+- Point cloud of a sorghum plant captured by Kinect v2
+
+.pull-left[
+<img src="images/Lirong/Picture1.png" width="100%" align="center" />
+]
+
+.pull-right[
+<img src="images/Lirong/pointcloud.gif" width="100%" align="center" />
+]
+
+---
+
+### Applications
+
+- 3D Hough line and plane detection
+
+.pull-left[
+<img src="images/Lirong/Picture2.png" width="100%" align="center" />
+]
+
+.pull-right[
+<img src="images/Lirong/detection.gif" width="100%" align="center" />
+]
