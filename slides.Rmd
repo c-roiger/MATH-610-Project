@@ -19,6 +19,65 @@ knitr::include_graphics("images/Charlotte/Picture1.png")
 
 ---
 
+# The Hough Transform
+
+--
+
+- Transformation:
+
+$$r = x \cos \theta + y \sin \theta$$
+
+.center[
+<!-- <img src="images/Caleb/hough_representation.png" width="50%" align="center" /> -->
+<img src="images/Caleb/hough_representation.png" width="30%" align="center" />
+]
+
+- Nonconvex Optimization Problem
+
+---
+
+# Hough Transformation Steps
+
+.center[
+<!-- <img src="images/Caleb/hough_steps.png" width="50%" align="center" /> -->
+<img src="images/Caleb/hough_steps.png" width="100%" align="center" />
+]
+
+---
+
+# Hough Transformation Result
+
+.center[
+<img src="images/Caleb/hough_space.png" width="100%" align="center" />
+]
+
+---
+
+# Limitations
+
+- How to deal with thick lines?
+- How many lines do we want to detect?
+
+---
+
+# Detecting Roads
+
+.center[
+<img src="images/Caleb/ada_hayden.png" width="100%" align="center" />
+]
+
+---
+
+# Result
+
+.center[
+<img src="images/Caleb/ada_res.png" width="100%" align="center" />
+]
+
+
+
+---
+
 class: inverse, center, middle
 
 # Circular Hough Transform
@@ -162,3 +221,12 @@ knitr::include_graphics("images/Lirong/demo.png")
 .pull-right[
 <img src="images/Lirong/detection.gif" width="100%" align="center" />
 ]
+
+---
+
+### References
+
+1. Google Maps
+2. Wikipedia, "Hough Transform", "https://en.wikipedia.org/wiki/Hough_transform"
+3. StackOverflow,
+   "https://stackoverflow.com/questions/4709725/explain-hough-transformation"

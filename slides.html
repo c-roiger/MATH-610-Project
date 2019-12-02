@@ -30,6 +30,65 @@ knitr::include_graphics("images/Charlotte/Picture1.png")
 
 ---
 
+# The Hough Transform
+
+--
+
+- Transformation:
+
+`$$r = x \cos \theta + y \sin \theta$$`
+
+.center[
+&lt;!-- &lt;img src="images/Caleb/hough_representation.png" width="50%" align="center" /&gt; --&gt;
+&lt;img src="images/Caleb/hough_representation.png" width="30%" align="center" /&gt;
+]
+
+- Nonconvex Optimization Problem
+
+---
+
+# Hough Transformation Steps
+
+.center[
+&lt;!-- &lt;img src="images/Caleb/hough_steps.png" width="50%" align="center" /&gt; --&gt;
+&lt;img src="images/Caleb/hough_steps.png" width="100%" align="center" /&gt;
+]
+
+---
+
+# Hough Transformation Result
+
+.center[
+&lt;img src="images/Caleb/hough_space.png" width="100%" align="center" /&gt;
+]
+
+---
+
+# Limitations
+
+- How to deal with thick lines?
+- How many lines do we want to detect?
+
+---
+
+# Detecting Roads
+
+.center[
+&lt;img src="images/Caleb/ada_hayden.png" width="100%" align="center" /&gt;
+]
+
+---
+
+# Result
+
+.center[
+&lt;img src="images/Caleb/ada_res.png" width="100%" align="center" /&gt;
+]
+
+
+
+---
+
 class: inverse, center, middle
 
 # Circular Hough Transform
@@ -165,6 +224,15 @@ class: inverse, center, middle
 .pull-right[
 &lt;img src="images/Lirong/detection.gif" width="100%" align="center" /&gt;
 ]
+
+---
+
+### References
+
+1. Google Maps
+2. Wikipedia, "Hough Transform", "https://en.wikipedia.org/wiki/Hough_transform"
+3. StackOverflow,
+   "https://stackoverflow.com/questions/4709725/explain-hough-transformation"
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
